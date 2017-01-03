@@ -6,9 +6,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 if ( $method === 'POST' ) {
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+	$project_name = $modx->getOption('site_name');
+	$admin_email  = $modx->getOption('emailsender');
+	$form_subject = "Заявка с сайта " . $modx->getOption('site_name') . "";
 
 	foreach ( $_POST as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
