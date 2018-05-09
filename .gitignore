@@ -2,5 +2,7 @@
 /dist/
 /.git/
 /app/css/
-/**/*.psd
+/**/_backstage
+/**/package-lock.json
 /**/Thumbs.db
+/**/*.DS_Store
