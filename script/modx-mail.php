@@ -3,7 +3,9 @@
 $method = $_SERVER['REQUEST_METHOD'];
 
 // Script Foreach
+
 $c = true;
+
 if ( $method === 'POST' ) {
 
 	$project_name = $modx->getOption('site_name');
@@ -49,7 +51,7 @@ function adopt($text) {
 // Set content-type header for sending HTML email 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
- 
+
 // Additional headers 
 $headers .= 'From: <'.$admin_email.'>' . "\r\n"; 
 $headers .= $reply_email . "\r\n";
