@@ -4,7 +4,7 @@ document.querySelectorAll('.uniForm').forEach( (e) => {
 
 	e.addEventListener('submit', function(e) {
 
-			let th      = this,
+      let th      = this,
           params  = new FormData(this),
           request = new XMLHttpRequest()
 
