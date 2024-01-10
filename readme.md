@@ -1,6 +1,6 @@
-<h2>How to use uniMail</h2>
+<h2>Universal PHP Mail Feedback Script</h2>
 
-<p>Universal PHP Mail Feedback Script</p>
+<p>How to use uniMail:</p>
 
 <ol>
 	<li>Include jQuery</li>
