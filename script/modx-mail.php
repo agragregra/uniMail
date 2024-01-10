@@ -38,26 +38,15 @@ if ( $method === 'POST' ) {
 			";
 		}
 	}
-}
+};
 
 $message = "<table style='width: 100%;'>$message</table>";
 
-function adopt($text) {
-	return '=?UTF-8?B?'.Base64_encode($text).'?=';
-}
+function adopt($text) { return '=?UTF-8?B?'.Base64_encode($text).'?='; };
 
-// $headers = "MIME-Version: 1.0" . PHP_EOL .
-
-// Set content-type header for sending HTML email 
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// Additional headers 
-$headers .= 'From: <'.$admin_email.'>' . "\r\n"; 
-$headers .= $reply_email . "\r\n";
-
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
+$headers = "MIME-Version: 1.0" . "\r\n" .
+"Content-Type: text/html; charset=utf-8" . "\r\n" .
+"From: " . adopt($project_name) . " <" . $admin_email . ">" . "\r\n" .
+"Reply-To: " . $admin_email . "" . "\r\n";
 
 mail($admin_email, adopt($form_subject), $message, $headers );
